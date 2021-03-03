@@ -19,7 +19,8 @@ public class Main {
     public static Map<String, Cat> addCatsToMap(String[] cats) {
         Map<String, Cat> result = new HashMap<>();
         for(int i =0; i< cats.length; i++){
-            result.put(cats[i], new Cat(cats[i]));
+            Cat cat = new Cat(cats[i]);
+            result.put(cats[i], new Cat(cats[i]));//Добавляем в map ключем будет имя кота из массива, данными обьект кэт, сразу создаем и добавляем
         }
         return result;
     }
